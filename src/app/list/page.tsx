@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Filter from '@/components/Filter'
 import ProductList from '@/components/ProductList'
 import { wixClientServer } from '@/lib/wixClientServer'
+import Skeleton from '@/components/Skeleton'
 
 const ListPage = async ({ searchParams }: { searchParams: any }) => {
   const wixClient = await wixClientServer()
@@ -33,8 +34,10 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
       <Filter />
 
       {/*ProductList*/}
-      <h1 className="mt-12 text-xl font-semibold">Shoes For You</h1>
-      <Suspense>
+      <h1 className="mt-12 text-xl font-semibold">
+        {cat?.collection?.name} For You
+      </h1>
+      <Suspense fallback={<Skeleton />}>
         <ProductList
           categoryId={
             cat.collection?._id || '00000000-000000-000000-000000000001'
