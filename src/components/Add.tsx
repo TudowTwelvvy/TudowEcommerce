@@ -2,7 +2,15 @@
 
 import React, { useState } from 'react'
 
-function Add() {
+function Add({
+  productId,
+  variantId,
+  stockNumber,
+}: {
+  productId: string
+  variantId: string
+  stockNumber: number
+}) {
   const [quantity, setQuantity] = useState(1)
 
   //TEMPORARY

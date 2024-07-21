@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-const images = [
+/**const images = [
   {
     id: 1,
     url: 'https://images.pexels.com/photos/19036832/pexels-photo-19036832/free-photo-of-mountain-reflection-in-lake.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load',
@@ -20,16 +20,16 @@ const images = [
     id: 4,
     url: 'https://images.pexels.com/photos/20832069/pexels-photo-20832069/free-photo-of-a-narrow-street-with-buildings-and-cars.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load',
   },
-]
+]**/
 
-function ProductImages() {
+function ProductImages({ items }: { items: any }) {
   const [index, setIndex] = useState(0)
 
   return (
     <div className="">
-      <div className="h-[500px] relative ">
+      <div className="h-[500px] relative">
         <Image
-          src={images[index].url}
+          src={items[index].image?.url}
           alt=""
           fill
           sizes="50vw"
@@ -37,18 +37,18 @@ function ProductImages() {
         />
       </div>
       <div className="flex justify-between gap-4 mt-8">
-        {images.map((img, index) => (
+        {items.map((item: any, i: number) => (
           <div
             className="w-1/4 h-32 relative gap-4 mt-8 cursor-pointer"
-            key={img.id}
-            onClick={() => setIndex(index)}
+            key={item._id}
+            onClick={() => setIndex(i)}
           >
             <Image
-              src={img.url}
+              src={item.image?.url}
               alt=""
               fill
               sizes="30vw"
-              className="object-cover"
+              className="object-cover rounded-md"
             />
           </div>
         ))}
