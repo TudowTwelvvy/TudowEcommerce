@@ -13,7 +13,7 @@ const wixClient = createClient({
   modules: {
     products,
     collections,
-    //currentCart,
+    currentCart,
     redirects,
   },
   auth: OAuthStrategy({

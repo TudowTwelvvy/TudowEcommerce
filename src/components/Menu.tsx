@@ -1,11 +1,14 @@
 'use client'
 
+import { useCartStore } from '@/hooks/useCartStore'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
 function Menu() {
   const [open, setOpen] = useState(false)
+
+  const { counter } = useCartStore()
 
   return (
     <div>
@@ -25,7 +28,7 @@ function Menu() {
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
           <Link href="/">Logout</Link>
-          <Link href="/">Cart(1)</Link>
+          <Link href="/">Cart({counter})</Link>
         </div>
       )}
     </div>
