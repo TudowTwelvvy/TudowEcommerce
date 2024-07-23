@@ -11,7 +11,10 @@ function CartModal() {
   const wixClient = useWixClient()
   const { cart, isLoading, removeItem } = useCartStore()
 
-  const arr = cart.lineItems?.map((i) => Number(i.price?.amount))
+  const arr = cart.lineItems?.map(
+    (i) => Number(i.price?.amount) * Number(i.quantity)
+  )
+  console.log(arr)
   const subTotal = arr?.reduce((acc, num) => acc + num)
 
   return (

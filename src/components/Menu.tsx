@@ -1,6 +1,7 @@
 'use client'
 
 import { useCartStore } from '@/hooks/useCartStore'
+import { useWixClient } from '@/hooks/useWixClient'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -10,8 +11,11 @@ function Menu() {
 
   const { counter } = useCartStore()
 
+  const wixClient = useWixClient()
+  const isLoggedIn = wixClient.auth.loggedIn()
+
   return (
-    <div>
+    <div className="z-10">
       <Image
         src="/menu.png"
         alt="tudow-logo"
@@ -22,11 +26,10 @@ function Menu() {
       />
       {open && (
         <div className="absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center gap-8 text-xl z-10">
-          <Link href="/">Shop</Link>
-          <Link href="/">Deals</Link>
-          <Link href="/">About</Link>
+          <Link href="/list">Shop</Link>
+          <Link href="/about">About</Link>
           <Link href="/">Contact</Link>
-          <Link href="/">Logout</Link>
+          <Link href="/login">{!isLoggedIn ? 'Logout' : 'Login'}</Link>
           <Link href="/">Cart({counter})</Link>
         </div>
       )}
