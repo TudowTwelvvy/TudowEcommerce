@@ -27,12 +27,13 @@ function AboutPge() {
 
         <h4 className="font-medium">Our Customers</h4>
         <p className="italic">
-          "I adore the necklace I purchased from Tudowshop! The craftsmanship is
-          impeccable, and it arrived beautifully packaged." - Tumelo.
+          &quot;I adore the necklace I purchased from Tudowshop! The
+          craftsmanship is impeccable, and it arrived beautifully
+          packaged.&quot; - Tumelo.
         </p>
         <p className="italic">
-          "Tudowshop exceeded my expectations! Their customer service is
-          outstanding, and a sneaker I bought is my new favorite piece." -
+          &quot;Tudowshop exceeded my expectations! Their customer service is
+          outstanding, and a sneaker I bought is my new favorite piece.&quot; -
           Zodwa.
         </p>
         <h4 className="font-medium">Explore Tudowshop</h4>
