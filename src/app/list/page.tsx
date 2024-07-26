@@ -25,7 +25,13 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
           </button>
         </div>
         <div className="relative w-1/3">
-          <Image src="/woman.png" alt="" fill className="object-contain" />
+          <Image
+            src="/woman.png"
+            alt=""
+            fill
+            sizes="100%"
+            className="object-contain"
+          />
         </div>
       </div>
 
