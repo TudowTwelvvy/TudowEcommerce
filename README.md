@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Full-Stack E-Commerce 
 
-## Getting Started
+~Application Overview~
+This project is a comprehensive full-stack e-commerce application designed to provide a seamless shopping experience. The application leverages modern web development technologies, ensuring high performance, scalability, and maintainability. It includes features for browsing products, managing user accounts, and all wrapped in a sleek and responsive user interface. 
 
-First, run the development server:
+~Technologies Used~
+•TypeScript: Provides static type-checking to enhance code quality and maintainability.
+•Next.js: A React framework that enables server-side rendering and static site generation for improved performance and SEO.
+•Tailwind CSS: A utility-first CSS framework for building custom designs without writing custom CSS.
+•Zustand: A small, fast, and scalable state management solution.
+•Wix: Used for backend services like user authentication, database management, and other custom backend logic.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+~Features~
+•Product Listing and Browsing Dynamic product listings with pagination. •Search and filter functionality to find products easily.
+•Detailed product pages with images, descriptions, and prices. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+~User Authentication~
+•User registration and login with email/password.
+•Password reset functionality.
+•Secure authentication flows using tokens and session management.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+~Shopping Cart and Checkout~
+•Add/remove products to/from the shopping cart.
+•View cart summary and manage quantities.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+~Architecture Frontend~
+•Next.js Pages and API Routes: Next.js handles both the frontend and backend routes. Pages are pre-rendered for optimal performance.
+•State Management: Zustand is used to manage application state, providing a simple and scalable solution.
+•Styling: Tailwind CSS is used for styling, enabling rapid UI development with its utility-first approach.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+~Backend~
+•Wix Backend Services: Wix is used for backend services such as user authentication, database management, and custom logic through its Velo platform.API Integration: Custom APIs are created using Next.js API routes, integrating with Wix services for data retrieval and manipulation.
