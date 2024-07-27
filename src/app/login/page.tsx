@@ -19,9 +19,10 @@ const LoginPage = () => {
 
   const isLoggedIn = wixClient.auth.loggedIn()
 
-  if (isLoggedIn) {
+  /*if (isLoggedIn) {
     router.push('/')
-  }
+  }*/
+  console.log(isLoggedIn)
 
   const [mode, setMode] = useState(MODE.LOGIN)
 
@@ -91,7 +92,7 @@ const LoginPage = () => {
 
       switch (response?.loginState) {
         case LoginState.SUCCESS:
-          setMessage('Successful! You are being redirected.')
+          setMessage('Successful! You can now shop.')
           const tokens = await wixClient.auth.getMemberTokensForDirectLogin(
             response.data.sessionToken!
           )
